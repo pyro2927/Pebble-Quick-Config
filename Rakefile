@@ -15,4 +15,9 @@ namespace :run do
   task :development do
     sh %{shotgun -o 0.0.0.0}
   end
+  
+  desc "Test unicorn"
+  task :unicorn do
+    system %{foreman start}
+  end
 end
