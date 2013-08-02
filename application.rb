@@ -6,6 +6,7 @@ require 'sinatra/content_for'
 
 class MyApp < Sinatra::Base
   get '/' do
-    "hello world"
+    # erb "Hello world!"
+    erb :index
   end
 end
