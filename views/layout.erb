@@ -3,9 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Hello World</title>
-    <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/vendor/bootstrap3/glyphicon/bootstrap-glyphicons.css">
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+    <style>
+      .dbg1 { background: #ff0; }
+      .dbg2 { background: #aa0; }
+      .list-shb-features li { margin-top: 4px; margin-bottom: 4px; }
+    </style>
   </head>
   <body>
     <%= yield %>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
