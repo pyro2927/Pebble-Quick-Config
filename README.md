@@ -14,6 +14,17 @@ A simple boilerplate `sinatra` application skeleton for quick deployment to Hero
 * Default ruby version is `1.9.3-p448` via `rbenv`
 
 ## Installation
+Example app runs at [heroku][0]
+
+Clone the repo
+
+    git clone https://github.com/webBoxio/sinatra-heroku-boilerplate.git my-sinatra-app
+    git remote remove origin # remove default origin
+
+add your own repo (_origin_)
+
+    git remote add orgin YOUR_REPO_URL
+    # git push -u origin master
 
 You can install required `gem` files via;
 
@@ -37,7 +48,7 @@ S3 support.
 
     <img src="<%= @s3_prefix %>/images/foo.jpg" />
 
-will become (*depending on your prefs.yml*);
+will become (_depending on your prefs.yml_);
 
     <img src="http://foobar.s3.amazonaws.com/public/images/foo.jpg" />
 
@@ -49,6 +60,17 @@ in **production** mode.
 
 You can display all the rake tasks via `rake -T`
 
+## Deploy to Heroku
+
+Create a heroku app:
+
+    heroku apps:create
+    # you can give whatever name you like to
+    # heroku apps:rename NAME_OF_YOUR_APP
+    git push heroku
+
+
+[0]: http://sinatra-heroku-boilerplate.herokuapp.com/ 
 [1]: http://getbootstrap.com/
 [2]: http://glyphicons.getbootstrap.com/
 [3]: http://fontawesome.io/
