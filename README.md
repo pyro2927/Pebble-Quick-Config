@@ -33,6 +33,11 @@ You can install required `gem` files via;
 You can define your **Amazon S3 Bucket** information and **Google Analytics ID**
 in the `config/prefs.yml`. Use the `<%= @s3_prefix %>` tag in your templates aka `views`
 
+    s3_bucket: foobar
+    s3_path: /public
+    google_analytics_id: UA-XXXXXX-YY
+
+
 ## Warning for S3 Usage
 
 Please don't forget to add you `public/` folder to `.gitignore` if you push
