@@ -32,6 +32,17 @@ generates an empty string for `<%= @s3_prefix %>` and example above becomes:
 
     <link rel="stylesheet" href="/vendor/bootstrap3/glyphicon/bootstrap-glyphicons.css">
 
+Also, for example, you have image files under `public/images` and you want to use
+S3 support.
+
+    <img src="<%= @s3_prefix %>/images/foo.jpg" />
+
+will become (*depending on your prefs.yml*);
+
+    <img src="http://foobar.s3.amazonaws.com/public/images/foo.jpg" />
+
+on production mode...
+
 and uses your local `public/` folder. You can run server in a production mode via
 `rake run:production`. Don't forget, google analytics code will be shown only
 in **production** mode.
