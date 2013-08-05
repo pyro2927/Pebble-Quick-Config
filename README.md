@@ -33,6 +33,12 @@ You can install required `gem` files via;
 You can define your **Amazon S3 Bucket** information and **Google Analytics ID**
 in the `config/prefs.yml`. Use the `<%= @s3_prefix %>` tag in your templates aka `views`
 
+## Warning for S3 Usage
+
+Please don't forget to add you `public/` folder to `.gitignore` if you push
+all your static files to S3 Bucket. If not your Heroku slug file will grow
+and it is not wanted! (:
+
 Example data generates `http://foobar.s3.amazonaws.com/public` as prefix. Put
 all your static data you Amazon S3. Example usage `views/layout.erb`:
 
