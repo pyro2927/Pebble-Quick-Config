@@ -1,0 +1,3 @@
+s3_bucket: foobar
+s3_path: /public
+google_analytics_id: UA-XXXXXX-YY
