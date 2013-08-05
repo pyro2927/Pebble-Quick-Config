@@ -14,7 +14,7 @@ A simple boilerplate `sinatra` application skeleton for quick deployment to Hero
 * Default ruby version is `1.9.3-p448` via `rbenv`
 
 ## Installation
-Example app runs at [heroku][0]
+Example app runs at [Heroku][0]
 
 Clone the repo
 
@@ -68,7 +68,7 @@ You can display all the rake tasks via `rake -T`
 
 ## Deploy to Heroku
 
-Create a heroku app:
+Create a Heroku app:
 
     heroku apps:create
     # you can give whatever name you like to
