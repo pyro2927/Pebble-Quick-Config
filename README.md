@@ -8,6 +8,7 @@ A simple boilerplate `sinatra` application skeleton for quick deployment to Hero
 * [http://getbootstrap.com/][1]
 * [http://glyphicons.getbootstrap.com/][2]
 * [http://fontawesome.io/][3]
+* [http://bourbon.io/][4]
 
 ## Requirements
 
@@ -30,13 +31,19 @@ You can install required `gem` files via;
 
     bundle install --path vendor/bundle
 
+or you can use rake task;
+
+    rake install
+
 You can define your **Amazon S3 Bucket** information and **Google Analytics ID**
 in the `config/prefs.yml`. Use the `<%= @s3_prefix %>` tag in your templates aka `views`
 
-    s3_bucket: foobar
+    s3_bucket: sinatra-heroku-boilerplate
     s3_path: /public
-    google_analytics_id: UA-XXXXXX-YY
+    sync_path: public/
+    google_analytics_id: UA-6463685-31
 
+this example is a working example...
 
 ## Warning for S3 Usage
 
@@ -44,7 +51,7 @@ Please don't forget to add you `public/` folder to `.gitignore` if you push
 all your static files to S3 Bucket. If not your Heroku slug file will grow
 and it is not wanted! (:
 
-Example data generates `http://foobar.s3.amazonaws.com/public` as prefix. Put
+Example data generates `http://sinatra-heroku-boilerplate.s3-us-west-2.amazonaws.com/public/` as prefix. Put
 all your static data you Amazon S3. Example usage `views/layout.erb`:
 
     <link rel="stylesheet" href="<%= @s3_prefix %>/vendor/bootstrap3/glyphicon/bootstrap-glyphicons.css">
@@ -57,13 +64,15 @@ generates an empty string for `<%= @s3_prefix %>` and example above becomes:
 Also, for example, you have image files under `public/images` and you want to use
 S3 support.
 
-    <img src="<%= @s3_prefix %>/images/foo.jpg" />
+    <img src="<%= @s3_prefix %>/images/icons/apple-touch-icon-144-precomposed.png" />
 
 will become (_depending on your prefs.yml_);
 
-    <img src="http://foobar.s3.amazonaws.com/public/images/foo.jpg" />
+    <img src="http://sinatra-heroku-boilerplate.s3-us-west-2.amazonaws.com/public/images/icons/apple-touch-icon-144-precomposed.png" />
 
 on production mode...
+
+![Example Image](http://sinatra-heroku-boilerplate.s3-us-west-2.amazonaws.com/public/images/icons/apple-touch-icon-144-precomposed.png)
 
 and uses your local `public/` folder. You can run server in a production mode via
 `rake run:production`. Don't forget, google analytics code will be shown only
@@ -85,3 +94,4 @@ Create a Heroku app:
 [1]: http://getbootstrap.com/
 [2]: http://glyphicons.getbootstrap.com/
 [3]: http://fontawesome.io/
+[4]: http://bourbon.io/
