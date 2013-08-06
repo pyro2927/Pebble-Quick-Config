@@ -1,9 +1,8 @@
 # -*- encoding: utf-8 -*-
-require 'bundler'
-Bundler.require
 require 'sinatra/base'
 require 'sinatra/content_for'
 require 'yaml'
+require 'bourbon'
 
 $PREFS = YAML.load_file('./config/prefs.yml') || {}
 
@@ -17,5 +16,10 @@ class MyApp < Sinatra::Base
   end
   get '/' do
     erb :index
+  end
+  
+  get '/scss/:file.scss' do |file|
+    content_type :css
+    scss file.to_sym, :layout => false, :views => "#{settings.root}/scss"
   end
 end
