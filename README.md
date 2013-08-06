@@ -9,6 +9,7 @@ A simple boilerplate `sinatra` application skeleton for quick deployment to Hero
 * [http://glyphicons.getbootstrap.com/][2]
 * [http://fontawesome.io/][3]
 * [http://bourbon.io/][4]
+* [http://retinajs.com/][5]
 
 ## Requirements
 
@@ -80,6 +81,16 @@ in **production** mode.
 
 You can display all the rake tasks via `rake -T`
 
+## SASS and SCSS Usage
+
+You can both use `sass` and `scss`... Put **sass** files to `sass/` with `.sass` extension or put
+**scss** files to `scss/` with `.scss` extension. Default skel comes with `scss` and **bourbon** included.
+
+`views/layout.erb` :
+
+    <link href="/scss/application.scss" rel="stylesheet" />
+
+
 ## Deploy to Heroku
 
 Create a Heroku app:
@@ -95,3 +106,4 @@ Create a Heroku app:
 [2]: http://glyphicons.getbootstrap.com/
 [3]: http://fontawesome.io/
 [4]: http://bourbon.io/
+[5]: http://retinajs.com/
