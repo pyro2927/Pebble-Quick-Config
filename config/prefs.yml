@@ -1,3 +1,4 @@
-s3_bucket: foobar
+s3_bucket: sinatra-heroku-boilerplate
 s3_path: /public
-google_analytics_id: UA-XXXXXX-YY
+sync_path: public/
+google_analytics_id: UA-6463685-31
