@@ -1,0 +1,14 @@
+.dbg1 {
+  background-color: yellow;
+}
+.dbg2 {
+  background-color: darken(yellow, 10%);
+}
+
+.block {
+  padding: 40px;
+}
+
+@mixin text-right {
+  float: right;
+}

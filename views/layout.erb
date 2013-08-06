@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Hello World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
     <link rel="stylesheet" href="<%= @s3_prefix %>/vendor/bootstrap3/glyphicon/bootstrap-glyphicons.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
@@ -12,16 +13,14 @@
     <link rel="apple-touch-icon-precomposed" href="<%= @s3_prefix %>/images/icons/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="<%= @s3_prefix %>/images/icons/favicon.ico">
     <link href="/scss/application.scss" rel="stylesheet" />
-    <style>
-      .dbg1 { background: #ff0; }
-      .dbg2 { background: #aa0; }
-      .list-shb-features li { margin-top: 4px; margin-bottom: 4px; }
-    </style>
   </head>
   <body>
+    
     <%= yield %>
+    
     <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+    <script src="<%= @s3_prefix %>/vendor/retina.js"></script>
     <% if settings.production? and settings.google_analytics_id %>
     <script type="text/javascript">
       var _gaq=[['_setAccount','<%= settings.google_analytics_id %>'],['_trackPageview']];
