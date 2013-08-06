@@ -4,4 +4,4 @@ vendor/bundle
 !.gitkeep
 
 # uncomment the line below if you use S3 Bucket
-# public/*
+public/*
