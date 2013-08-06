@@ -21,3 +21,9 @@ namespace :run do
     system %{foreman start}
   end
 end
+
+desc "Install"
+task :install do
+  puts "Installing required gem files..."
+  sh "bundle install --path vendor/bundle"
+end
