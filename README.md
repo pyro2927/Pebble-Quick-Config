@@ -22,7 +22,7 @@ Clone the repo
     git clone https://github.com/webBoxio/sinatra-heroku-boilerplate.git my-sinatra-app
     git remote remove origin # remove default origin
 
-add your own repo (_origin_)
+add your own repo ( _origin_ )
 
     git remote add orgin YOUR_REPO_URL
     # git push -u origin master
@@ -66,7 +66,7 @@ S3 support.
 
     <img src="<%= @s3_prefix %>/images/icons/apple-touch-icon-144-precomposed.png" />
 
-will become (_depending on your prefs.yml_);
+will become ( _depending on your prefs.yml_ );
 
     <img src="http://sinatra-heroku-boilerplate.s3-us-west-2.amazonaws.com/public/images/icons/apple-touch-icon-144-precomposed.png" />
 
