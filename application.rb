@@ -17,9 +17,13 @@ class MyApp < Sinatra::Base
   get '/' do
     erb :index
   end
-  
-  get '/scss/:file.scss' do |file|
+
+  get %r{/(sass|scss)/([\w]+)\.(?:sass|scss)} do
     content_type :css
-    scss file.to_sym, :layout => false, :views => "#{settings.root}/scss"
+    if params[:captures].first == "sass"
+      sass params[:captures][1].to_sym, :layout => false, :views => "#{settings.root}/#{params[:captures].first}"
+    else
+      scss params[:captures][1].to_sym, :layout => false, :views => "#{settings.root}/#{params[:captures].first}"
+    end
   end
 end
