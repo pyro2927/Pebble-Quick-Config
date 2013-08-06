@@ -27,3 +27,18 @@ task :install do
   puts "Installing required gem files..."
   sh "bundle install --path vendor/bundle"
 end
+
+desc "Sync static files to Amazon S3"
+task :s3sync do
+  system "find . -name '.DS_Store' -print -delete"
+  require 'yaml'
+  $PREFS = YAML.load_file('./config/prefs.yml') || {}
+  if $PREFS.has_key?('s3_bucket')
+    s3_bucket = $PREFS['s3_bucket']
+    s3_path = $PREFS['s3_path'] || '/'
+    sync_path = $PREFS['sync_path'] || 'public/'
+    system "s3cmd -P -M --delete-removed sync #{sync_path} s3://#{s3_bucket}#{s3_path}/"
+  else
+    puts "Please define: s3_bucket"
+  end
+end
