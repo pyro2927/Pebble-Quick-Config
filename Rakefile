@@ -8,12 +8,12 @@ namespace :run do
   task :production do
     ENV['RACK_ENV'] = "production"
     puts "Running as Production..."
-    sh %{shotgun -o 0.0.0.0}
+    sh %{shotgun -o 0.0.0.0 config/config.ru}
   end
   
   desc "Start server as Development (local)"
   task :development do
-    sh %{shotgun -o 0.0.0.0}
+    sh %{shotgun -o 0.0.0.0 config/config.ru}
   end
   
   desc "Test unicorn"

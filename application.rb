@@ -3,10 +3,14 @@ require 'sinatra/base'
 require 'sinatra/content_for'
 require 'yaml'
 require 'bourbon'
+require './libs/helpers'
 
 $PREFS = YAML.load_file('./config/prefs.yml') || {}
 
 class MyApp < Sinatra::Base
+  helpers TemplateHelpers
+  helpers Sinatra::ContentFor
+
   configure do
     set :s3_config, "http://#{$PREFS['s3_bucket']}.s3.amazonaws.com#{$PREFS['s3_path']}" if $PREFS.has_key?("s3_bucket") && $PREFS.has_key?("s3_path")
     set :google_analytics_id, "#{$PREFS['google_analytics_id']}" if $PREFS.has_key?("google_analytics_id")

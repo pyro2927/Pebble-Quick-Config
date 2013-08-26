@@ -90,6 +90,14 @@ You can both use `sass` and `scss`... Put **sass** files to `sass/` with `.sass`
 
     <link href="/scss/application.scss" rel="stylesheet" />
 
+## Test Your Server
+
+You can use `foreman`.
+
+    foreman start # or use built-in rake task
+    rake run:unicorn
+
+open [http://localhost:5000](http://localhost:5000)
 
 ## Deploy to Heroku
 
