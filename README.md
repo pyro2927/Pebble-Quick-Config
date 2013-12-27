@@ -21,3 +21,9 @@ Currently there are only two query params:
 
 ## Screenshot
 ![](img/screenshot.PNG)
+
+## Thanks
+Thanks to:
+
+* webBoxio for [sinatra-heroku-boilerplate](https://github.com/webBoxio/sinatra-heroku-boilerplate)
+* Twitter for [Twitter Bootstrap](http://getbootstrap.com/)
