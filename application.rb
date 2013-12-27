@@ -24,6 +24,7 @@ class MyApp < Sinatra::Base
 
   get '/config' do
     @title = params[:title]
+    @fields = params[:fields].split(",")
     erb :index
   end
 
