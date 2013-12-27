@@ -22,6 +22,10 @@ class MyApp < Sinatra::Base
     erb :index
   end
 
+  get '/config' do
+    @title = params[:title]
+  end
+
   get %r{/(sass|scss)/([\w]+)\.(?:sass|scss)} do
     content_type :css
     if params[:captures].first == "sass"
