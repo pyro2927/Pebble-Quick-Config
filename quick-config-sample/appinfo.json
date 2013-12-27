@@ -1,0 +1,21 @@
+{
+  "uuid": "5d0e24fc-9dd7-4498-a04a-75067dbdfed2",
+  "shortName": "quick-config-sample",
+  "longName": "quick-config-sample",
+  "companyName": "MakeAwesomeHappen",
+  "versionCode": 1,
+  "versionLabel": "1.0.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "Username": 0,
+    "Passwd": 1
+  },
+  "resources": {
+    "media": []
+  },
+  "capabilities": [
+    "configurable"
+  ]
+}
