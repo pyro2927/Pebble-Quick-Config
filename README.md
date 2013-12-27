@@ -68,7 +68,7 @@ Now you just need to configure PebbleJS to load up your configuration window and
 ````
 Pebble.addEventListener("showConfiguration",
   function(e) {
-    Pebble.openURL("http://pebble-config.herokuapp.com/config?title=Quick%20Config&fields=email_Username,password_Passwd");
+    Pebble.openURL("http://pebble-config.herokuapp.com/config?title=Quick%20Config&fields=email_Username,password_Passwd"); // our dyanmic configuration page
   }
 );
 Pebble.addEventListener("webviewclosed",
@@ -90,6 +90,9 @@ Currently there are only two query params:
 
 1. title: a URL encoded title to be displayed at the top of the screen
 2. fields: a comma seperated list of fields to display. If the string contains an underscore (*_*), the text preceeding the underscore will be used as the input field type. This is useful for things like *email* or *password*.
+
+Make sure they are URL encoded and appended to <http://pebble-config.herokuapp.com/config?>
+
 
 ## Screenshot
 ![](img/screenshot.PNG)
