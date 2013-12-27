@@ -24,6 +24,7 @@ class MyApp < Sinatra::Base
 
   get '/config' do
     @title = params[:title]
+    erb :index
   end
 
   get %r{/(sass|scss)/([\w]+)\.(?:sass|scss)} do
