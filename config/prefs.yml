@@ -1,6 +1,0 @@
-# Example:
-# http://sinatra-heroku-boilerplate.s3-us-west-2.amazonaws.com/public/
-s3_bucket: sinatra-heroku-boilerplate
-s3_path: /public
-sync_path: public/
-google_analytics_id: UA-6463685-31

@@ -1,0 +1,22 @@
+.container.block
+  .row
+    .col-xs-12
+      .page-header
+        h1
+          = @title
+      p.lead
+
+      .row
+        form[role="form" onsubmit="complete()" action="javascript:void(0);"]
+          - @fields.each do |f|
+            - name = f.split("_").last
+            - type = f.split('_').count > 0 ? f.split('_').first : ''
+            .form-group
+              label
+                = name
+              input[type="#{type}" class="form-control" name="#{name}" value="#{params[name] || ''}"]
+          button.btn.btn-default[type="submit"]
+            | Save
+
+javascript:
+  function complete() { var o = {}; $.each($('form').serializeArray(), function() { o[this.name] = this.value; }); window.location.href="pebblejs://close#" + JSON.stringify(o); return false }

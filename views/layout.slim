@@ -1,0 +1,14 @@
+doctype html
+html[lang="en"]
+  head
+    meta[charset="utf-8"]
+    title
+      = params['title'] || 'Hello World'
+    meta[name="viewport" content="width=device-width, initial-scale=1.0"]
+    link[rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"]
+    link[rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"]
+    link[href="/scss/application.scss" rel="stylesheet"]
+  body
+    == yield
+    script[src="http://code.jquery.com/jquery.js"]
+    script[src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"]
